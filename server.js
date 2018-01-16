@@ -53,7 +53,13 @@ app.get('/json', (request, response) => {
     response.send({
         prop1: 'property1',
         prop2: 'property2'
-    })
+    });
+});
+
+app.get('/projects', (request, response) => {
+    response.render('projects.hbs', {
+        pageTitle: 'Projects Page'
+    });
 });
 
 app.get('/bad', (request, response) => {
